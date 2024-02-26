@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="feebackstyle.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+	<title>Send your Feedback about our site</title>
+    
+    <script>
+        function validationForm() {
+        //retrieves the input values from the fields
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var rating = document.forms["myForm"]["rating"];
+        var comments = document.forms["myForm"]["comments"].value;
+        //if name field is empty the user is alerted
+        if (name == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+        //if email field is empty user is alerted
+        if (email == "") {
+          alert("Email must be filled out");
+          return false;
+        } else {
+          //else if the email format is wrong the user gets alerted
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Invalid email format");
+            return false;
+          }
+        }
+        //if rating isnt chosen user gets alerted
+        if (rating.value == "") {
+          alert("Rating must be filled out");
+          return false;
+        } else {
+          var ratingText = rating.options[rating.selectedIndex].text;
+          alert("Dear " + name + ", Thank you very much for your feedback. You have rated our site as " + ratingText + ", and your comment was " + comments)
+        }
+      }
+
+        function resetForm() {
+          document.getElementById("myForm").reset();
+        }
+
+        function goToMainPage() {
+          window.location.href = "mainPage.html";
+        }
+
+    </script>
+
+</head>
+<body>
+  <nav>
+
+    <div class="heading">
+      <i class='bx bx-calendar-edit calender'></i>
+      <h1>ScheduleIt</h1>
+
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="mainPage.html">Home</a></li>
+      <li><a href="cart.html">Shop</a></li>
+      <li><a href="registrationform.html">Register</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a class="active" href="FormSheet.html">Feedback</a></li>
+      <li><a href="bestdayspage.html">BestDays</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Quiz.html">Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+  </nav>
+  <div class = "container">
+    <!--on clicking the submit button the validationform is called-->
+    <form id="myForm" name = "myForm" onsubmit="return validationForm()">
+      <h1>Feedback Form</h1><br>
+      <!--name field-->
+        <div class ="input control">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br>
+          <div class="error"></div>
+        </div>
+        <!--email field-->
+        <div class="input-control">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email"><br>
+          <div class="error"></div>
+        </div>
+        <!--Comments-->
+        <div class="input-control">
+          <label for="comments">Comments:</label><br>
+          <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br><br><br>
+          <div class="error"></div>
+        </div>
+        <!--rating-->
+      <label for="rating">Rating:</label>
+      <!--allow the user to choose a rating from a dropdown list-->
+      <select id="rating" name="rating">
+        <option value="">Select a rating</option>
+        <option value="1">Poor</option>
+        <option value="2">Unsatisfactory</option>
+        <option value="3">Satisfactory</option>
+        <option value="4">Very Satisfactory</option>
+        <option value="5">Outstanding</option>
+      </select><br><br>
+      <!--submit button that will submit the form data when clicked-->
+      <input type="submit" value="Submit">
+      <!--button that will reset the form data when clicked-->
+      <input type="button" value="Reset" onclick="resetForm()">
+      <!--take the user back to the main page when clicked-->
+      <input type="button" value="Back to Main Page" onclick="goToMainPage()">
+      </div>
+    </form>
+  </body>
+  <footer class="footer">
+    <div class="links">
+      <a href="minudaka.html">Editors Page</a>
+    </div>
+  </footer>
+</html>

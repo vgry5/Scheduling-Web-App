@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Best Days</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <nav>
+
+      <div class="heading">
+        <i class='bx bx-calendar-edit calender'></i>
+        <h4>ScheduleIT</h4>
+  
+      </div>
+  
+      <ul class="nav-links">
+        <li><a href="mainPage.html">Home</a></li>
+        <li><a href="cart.html">Shop</a></li>
+        <li><a href="registrationform.html">Register</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="FormSheet.html">Feedback</a></li>
+        <li><a class="active" href="bestdayspage.html">BestDays</a></li>
+        <li><a href="gallerypage.html">Gallery</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+  
+    </nav>
+    <h1 class="BD">Best Days</h1>
+    <div id="containerdays"></div>
+    <div class="menu">
+      <label for="bg-color-select" class="label1">Background color: </label>
+      <select id="bg-color-select" onchange="changeBackgroundColor()">
+        <option value="red">Red</option>
+        <option value="yellow">yellow</option>
+        <option value="grey">grey</option>
+      </select>
+
+      <label for="text-color-select" class="label1">Text color: </label>
+      <select id="text-color-select" onchange="changeTextColor()">
+        <option value="black">Black</option>
+        <option value="pink">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+    </div>
+    <script>
+        let bestdaysxml =  // xml string , has the data which needs to be displayed
+        `<?xml version="1.0" encoding="UTF-8"?>
+<BestDays> 
+    <days> 
+        <day>Monday</day>
+        <activity>Best day for meetings and planning.</activity>
+    </days>
+    <days>
+        <day>Tuesday</day>
+        <activity>Best day for creativity and brainstorming.</activity>
+    </days>
+    <days>
+        <day>Wednesday</day>
+        <activity>Best day for developing a new skill.</activity>
+    </days>
+    <days>
+        <day>Thursday</day>
+        <activity>Best day for presentations.</activity>
+    </days>
+    <days>
+        <day>Friday</day>
+        <activity>Best day to wrap up tasks and prepare for the weekend.</activity>
+    </days>
+    <days>
+        <day>Saturday</day>
+        <activity>Best day for self-care activities and personal development.</activity>
+    </days>
+    <days>
+        <day>Sunday</day>
+        <activity>Best day to relax and spend time with family and friends.</activity>
+    </days>
+    <days>
+        <day>Special Occasion</day>
+        <activity>Best day to celebrate important achievements and milestones.</activity>
+    </days>
+    <days>
+        <day>Holiday</day>
+        <activity>Best day to take a break and enjoy life.</activity>
+    </days>
+    <days>
+        <day>Important Day</day>
+        <activity>The day to catch up with missed work.</activity>
+    </days>
+</BestDays>`;
+//DOMPraser object is created to prase the xml string into a DOM document
+let bestdaysparser = new DOMParser();
+let bestxml = bestdaysparser.parseFromString(bestdaysxml,'text/xml');
+
+let bestdaydata = bestxml.getElementsByTagName("days");// Gets all the days elements in the xml doc
+let container=document.getElementById("containerdays");// Gets the container element from the html doc
+let table = document.createElement("table");
+table.className = "BestDays-Table";
+// let list = document.createElement("ul");// makes an unordered list to hold the data
+container.appendChild(table);//this appends the list element into the container element
+//Creating the table header
+let headerROW = table.insertRow();
+let dayh = headerROW.insertCell(0);
+let activityh = headerROW.insertCell(1);
+dayh.innerHTML="<b>Day</b>";
+activityh.innerHTML = "<b>Activity</b>";
+//loops through each days element in the xml doc
+for (let i=0; i < bestdaydata.length; i++){
+  //Gets the day and activity values for the current element
+  let day = bestdaydata[i].getElementsByTagName('day')[0].childNodes[0].nodeValue;
+  let activity = bestdaydata[i].getElementsByTagName('activity')[0].childNodes[0].nodeValue;
+
+  let row = table.insertRow();// creates a new list to hold the day and activity values
+  let dayCell = row.insertCell(0);
+  let activityCell = row.insertCell(1);
+  dayCell.innerHTML = day;
+  activityCell.innerHTML = activity;}
+  function changeBackgroundColor() {
+        // Get the selected value from the dropdown menu
+        let selectedColor = document.getElementById("bg-color-select").value;
+
+        // Set the background color of the page
+        document.body.style.background = selectedColor; 
+      }
+
+  function changeTextColor() {
+        // Get the selected value from the dropdown menu
+        let selectedColor = document.getElementById("text-color-select").value;
+
+        // Set the text color of the table
+        let table = document.getElementsByClassName("BestDays-Table")[0];
+        table.style.color = selectedColor;
+      }
+    </script>
+  </body>
+  <footer> <a href="yenuka.html">Editor</a></footer>
+  </html>

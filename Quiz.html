@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizstyle.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Quiz</title>
+</head>
+<body>
+
+    <nav>
+
+        <div class="heading">
+        <i class='bx bx-calendar-edit calender'></i>
+        <h1>ScheduleIt</h1>
+        </div>
+  
+        <ul class="nav-links">
+            <li><a href="mainPage.html">Home</a></li>
+            <li><a href="cart.html">Shop</a></li>
+            <li><a href="registrationform.html">Register</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="FormSheet.html">Feedback</a></li>
+            <li><a href="bestdayspage.html">BestDays</a></li>
+            <li><a href="FormSheet.html">Gallery</a></li>
+            <li><a class="active" href="Quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+  
+    </nav>
+
+
+    <div class="start-screen">
+        <!--when clicked the quiz starts-->
+        <button id="start-button">Start</button>
+    </div>
+    <!--the quiz is made in this-->
+    <div id="display-container">
+        <div class="header">
+            <div class="number-of-count">
+                <span class ="number-of-question">
+                    1 of 5 questions
+                </span>
+            </div>
+            <div class="timer-div">
+                <img src="timer.jpg" alt="" width="20px">
+                <span class="time-left">10s</span>
+            </div>
+    </div>
+    <div id="container">
+
+    </div>
+    <button id = "next-button">Next</button>
+    </div>
+    <div class="score-container hide">
+        <div id="user-score"></div>
+        <button id="restart">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

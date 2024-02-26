@@ -1,0 +1,221 @@
+  .subbutton{
+    background-color:rgb(102, 174, 150);
+    border: none;
+    color:white;
+    padding: 20px;
+    padding-right: 28px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin:100px 2px;
+    
+  }
+  .but{
+    align-items: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  }
+  .subbutton:hover{
+    cursor: pointer;
+    background-color:rgb(21, 111, 81);
+  }
+  .name{
+    padding:30px;
+    text-align: center;
+    }
+  .Email{
+    text-align: center;
+  }
+  .Aheading{
+    padding:30px;
+    text-align: center;
+    color: #ddd;
+  }
+  .box{
+    padding-right: 20px;
+    color: #ddd;
+
+  }
+    input{
+      font-size: 20px;
+    }
+    label{
+      font-size:medium;
+      color: black;
+      font-size: 40px;
+    }
+    .label1{
+      font-size:large;
+      color: #ddd;
+
+    }
+    
+    .menu{
+      position: absolute;
+      top: 100px;
+      left: 10px;
+    }
+   
+  button{
+    background-color:dodgerblue;
+  }
+  .subbutton{
+    border-radius: 7%;
+  }
+  nav {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    align-items: center;
+  
+    min-height: 8vh;
+  
+    background-color: teal;
+  
+    font-family: "Montserrat", sans-serif;
+  
+  }
+  
+  .heading {
+  
+    color:black;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 5px;
+  
+    font-size: 20px;
+  
+  }
+  
+  .BestDays-Table{
+    border-collapse: collapse;
+    width: 500px;
+    margin:auto;
+    margin-top: 50px;
+    
+  }
+  .BestDays-Table th, .BestDays-Table td{
+    border : 1px solid #ddd;
+    padding: 9px;
+    text-align:center;
+  }
+  .BestDays-Table th{
+    background: color #f2f2f2;
+    color: #333;
+    font-weight: bold;
+  }
+  .BD{
+    margin-top: 80px;
+    color: #ddd;
+    text-align: center;
+  }
+  * {
+
+    margin: 0px;
+  
+    padding: 0px;
+  
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+  
+  }
+  
+  body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+}
+  
+  .body-text {
+  
+    display: flex;
+
+    color: #ccc;
+  
+    font-family: "Montserrat", sans-serif;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    margin-top: 250px;
+  
+  }
+  nav {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    align-items: center;
+  
+    min-height: 8vh;
+  
+    background-color: teal;
+  
+    font-family: "Montserrat", sans-serif;
+  
+  }
+  
+  .heading {
+  
+    color: white;
+  
+    /* text-transform: uppercase; */
+  
+    letter-spacing: 5px;
+  
+    font-size: 20px;
+  
+  }
+  
+  .nav-links {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    width: 30%;
+  
+  }
+  
+  .nav-links li {
+  
+    list-style: none;
+  
+  }
+  
+  .nav-links a {
+  
+    color: white;
+  
+    text-decoration: none;
+  
+    letter-spacing: 3px;
+  
+    font-weight: bold;
+  
+    font-size: 14px;
+  
+    padding: 14px 16px;
+  
+  }
+  
+  .nav-links a:hover:not(.active) {
+  
+    background-color: lightseagreen;
+  
+  }
+  
+  .nav-links li a.active {
+  
+    background-color: #4caf50;
+  
+  }

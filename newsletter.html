@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Subscription Form</title>
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+  <nav>
+
+    <div class="heading">
+      <i class='bx bx-calendar-edit calender'></i>
+      <h4>ScheduleIT</h4>
+
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="mainPage.html">Home</a></li> 
+      <li><a href="cart.html">Shop</a></li>
+      <li><a href="registrationform.html">Register</a></li>
+      <li><a class="active" href="newsletter.html">Newsletter</a></li>
+      <li><a href="FormSheet.html">Feedback</a></li>
+      <li><a href="bestdayspage.html">BestDays</a></li>
+      <li><a href="gallerypage.html">Gallery</a></li>
+      <li><a href="Quiz.html">Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+  </nav>
+  <div class="container">
+  <h1  class ="Aheading">Subscribe our Newsletter</h1>
+  <br>
+  <form id = "#form">
+    <div class="name">
+    <label for="fname" class="box"> Name:</label>
+    <input type="text" id="fname" Name="fname" placeholder="Name" >
+  </div>
+  <br>
+  <div class="Email">
+    <label for="mail" class="box"> Email:</label>
+    <input type="email" id="mail" Name="mail" placeholder="abc@example.com" >
+  </div>
+  <br>
+  <div class="but">
+    <button class="subbutton" onclick="validateInput()" > <b>SUBSCRIBE</b></button>
+  </div>
+</div>
+  </form>
+  <script>
+    function validateInput() {
+      var nameInput = document.getElementById("fname").value.trim();//Chekcs if the fields are empty.
+      var emailInput = document.getElementById("mail").value.trim();
+      var nameRegex = /^[a-zA-Z]+$/; // Checks if omly strings are entered
+      var emailRegex = /^\S+@\S+\.\S+$/;// checks if the email is in the correct format.
+      if (nameInput === "" || emailInput === "") {
+        alert("Please fill in all fields!");
+      } else if (!nameRegex.test(nameInput)) {
+        alert("Invalid name format!");
+      } else if (!emailRegex.test(emailInput)) {
+        alert("Invalid email format!");
+      } else {
+        alert(`Dear ${nameInput}, you have successfully subscribed for a personalized newsletter`)
+        }
+}
+</script>
+</body>
+<footer> <a href="yenuka.html">Editor</a></footer>
+</html>

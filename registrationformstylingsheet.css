@@ -1,0 +1,205 @@
+@font-face {
+	font-family: VarelaRound-Regular;
+	src: url(fonts/VarelaRound-Regular.ttf);
+}
+
+.calender{
+  font-size: 50px;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+    font-family: sans-serif;
+}
+  
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+}
+  
+.body-text {
+    display: flex;
+    color: #ccc;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: teal;
+	padding-right : 40px;
+}
+  
+.heading1{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+  
+.nav-links {
+    display: flex;
+    justify-content: space-around; 
+    width: 30%;
+}
+  
+.nav-links li {
+    list-style: none;
+}
+  
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+}
+  
+.nav-links a:hover:not(.active) {
+    background-color: lightseagreen;
+}
+
+.nav-links li a.active {
+    background-color: #4caf50;
+}
+
+#body {							
+	display : flex;						/*Body gets divided into two directions*/
+	height : 100vh;						/*height is set to 100*/
+	justify-content: center;			/*all items get centered*/
+	align-items: center;				/*all items get centered*/
+}
+
+#container{
+	background-color : white;			/*set background color*/
+	max-width : 800px;					/*maximum with is set 800px*/
+	width : 100%;
+	padding : 20px ;					/*padding which is the space between the content and the boader*/
+	padding-right : 40px;				/*padding to the right is set*/
+	border-radius : 5px;				/*body radius is set this is done for the corners to become rounded*/
+}
+			
+#formheading {
+	position : relative;				/*This with make the element come out of the page*/
+	color : black;						/*Color is set to black*/
+	font-family: VarelaRound-Regular;	/*font is set*/
+	font-size : 25px;					/*font size is set*/
+	font-weight : 500;					/*font weight is set*/
+}
+			
+#formheading::before {
+	content: "ff";
+	overflow : hidden;					/*When the height is less than the content inside the element, the element gets overflowed on order to avoid that it is chnaged to hidden*/
+	position : absolute;				/*position is absolute relative to the formheading*/
+	background-image : linear-gradient(to right, #24c6dc, #514a9d);		/*set background color*/
+	bottom : 0;															/*relative position is changed*/
+	height : 3px;														/*height is set*/
+}
+			
+#details{
+	display : flex;
+	flex-wrap : wrap;							/*items go to the next line id there is no space in the current line*/
+	justify-content : space-between;			/*Equal space between content*/
+	margin : 20px 0 12px 0;						/*margin is set from all around*/
+}
+			
+.input{
+	margin-bottom : 15px;						
+	width : calc(100% / 2 - 20px )
+}
+			
+input{
+	height : 45px;
+	width : 100%;
+	outline : none;								/*boader line is invisible*/
+	border- radius : 5px;
+	border : 1px solid #ccc;
+	padding-left : 15px;
+	font-size : 16px;
+	border-bottom-width : 2px;
+	transition : all 0.3s ease;					/*when the input box is clicked transition takes place*/
+}
+			
+label{
+	display:inline-block;
+	margin-bottom : 5px;
+}
+			
+input:focus{
+	border-color : #514a9d;						/*Change of property for the transition*/
+}
+			
+.gender {
+	display : flex;
+	justify-content : space-between;
+	align-items : center;
+}	
+			
+#gendertitle{
+	font-size : 17px;
+	font-weight : 500;
+}
+			
+.genders {
+	padding-top : 4px;
+}
+			
+#circleone, #circletwo{
+	height : 10px;
+	width : 10px;
+	background : #d9d9d9;
+	margin-right : -125px;
+	border : 5px solid transparent;
+	border-radius : 50%;
+}
+			
+#circle-1:checked ~ #circleone,        /*These changes take place when the gender radio is clicked*/
+#circle-2:checked ~ #circletwo{
+	border-color : #d9d9d9;
+	background : #9b59b6;
+}
+			
+input[type="radio"]{							/*The gender radio buttons are hidden*/
+	display : none;
+}
+			
+.buttton {
+	height : 45px;
+	margin : 45px 0;
+}
+
+#button1 {
+	height : 100% !important;
+	width : 100%;
+	outline :none;
+	color : #fff;
+	border : none;
+	font-size : 18px;
+	font-weight : 500;
+	border-radius : 5px;
+	letter-spacing : 1px;												/*Space between letters*/
+	background-image : linear-gradient(to right, #24c6dc, #514a9d);
+}
+			
+.button1:hover{
+	background-image : linear-gradient(to right, #514a9d, #24c6dc);
+}
+			
+span{
+	color : red;
+}
+
+footer {
+	margin-bottom : 25px;
+	text-align: center; 
+}
+
+a {
+	color : white;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+
+   
+  <title>shopping Cart </title>
+  <link rel="stylesheet" href="cartstyling.css">
+  <!--icons-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <nav>
+
+      <div class="heading">
+        <i class='bx bx-calendar-edit calender'></i>
+        <h4>ScheduleIT</h4>
+
+      </div>
+
+      <ul class="nav-links">
+
+        <li><a  href="mainPage.html">Home</a></li>
+        <li><a class="active" href="cart.html">Shop</a></li>
+        <li><a href="registrationform.html">Register</a></li>
+        <li><a  href="newsletter.html">Newsletter </a></li>
+        <li><a href="FormSheet.html">Feedback</a></li>
+        <li><a  href="bestdayspage.html">BestDays</a></li>
+        <li><a href="gallerypage.html">Gallery</a></li>
+        <li><a href="Quiz.html">Quiz</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+
+      </ul>
+      
+    </nav>
+  
+      
+    
+  </header>
+  <h3>font size change</h3>
+  <button id="decreaseFont" class='bx bxs-minus-square'> </button>
+  <button id="increaseFont" class='bx bx-plus-medical'></button>
+  <section class="shop-heading">
+    <div class ="heading1"> 
+      <i class="bx bx-shopping-bag" id="cart-icon">Shopping Cart </i>
+    </div>
+    <div class="divide"></div>
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2  >
+          <div class="cart-content">
+            </div>
+            <div class="total">
+              <div class="total-title">Total </div>
+              <div class="total-price"> $0</div>
+            </div>
+            <!--personal detailes-->
+            <h2>Personal Details </h2>
+            <form class="form"id="details-form" onsubmit="return validateForm()">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <span id="name-error" class="error"></span>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <span id="email-error" class="error"></span>
+          
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+              <span id="phone-error" class="error"></span>
+          
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+              <span id="address-error" class="error"></span>
+              <button type="submit" class="submit">Submit</button>
+              
+            </form>
+            <!--button-->
+            <button type="button" class="btn-buy"> Buy Now </button>
+          
+      </div>
+   
+    <!--products-->
+    <div class="cart-items">
+      <!--item 1-->
+      <div class="item">
+        <img src="contact-book (1).png" alt="contact management apllication" class="item1-img">
+        <h2 class="item-title"> contact management</h2>
+        <span class="price">$20</span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+      <!--item 2-->
+      <div class="item">
+        <img src="file (1).png" alt="file storage management apllication" class="item1-img">
+        <h2 class="item-title"> file storage management </h2>
+        <span class="price">$30</span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+      <!--item 3-->
+      <div class="item">
+        <img src="calendar-days.png" alt="calender" class="item1-img">
+        <h2 class="item-title"> calender</h2>
+        <span class="price">$10 </span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+      <!--item 4-->
+      <div class="item">
+        <img src="sticky-note (1).png" alt="notes apllication" class="item1-img">
+        <h2 class="item-title"> easy notes</h2>
+        <span class="price">$50 </span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+      <!--item 5-->
+      <div class="item">
+        <img src="folder-open (1).png" alt="project management apllication" class="item1-img">
+        <h2 class="item-title"> project  management </h2>
+        <span class="price">$100</span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+      <!--item 6-->
+      <div class="item">
+        <img src="th-list (1).png" alt=" to do apllication" class="item1-img">
+        <h2 class="item-title"> todo </h2>
+        <span class="price">$39</span>
+        <i class='bx bx-cart-add add-cart'></i>
+      </div>
+    </div>
+    
+  </section> 
+  <script src="cartjavascript.js" ></script>
+</body> 
+<footer>
+  <a href="mandinu.html">Editors page</a>
+</footer>
+</html>  

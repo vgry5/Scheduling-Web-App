@@ -1,0 +1,53 @@
+* {
+	margin : 0;
+	padding : 0;
+	font-family : 'Poppins' , sans-serif;
+	color:white;
+}
+body {
+	background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+}
+		
+#heading {
+	margin-top : 80px;
+	color:white;
+	text-align:center
+}
+		
+#teamno {
+	margin-bottom : 80px;
+	color:white;
+	text-align:center
+}
+		
+#Teammembers {
+	display : flex;
+	justify-content : space-evenly
+}
+		
+.members {
+	border: 0.5px solid white;
+}
+		
+.membersimgs {
+	display : flex;
+	justify-content: center;
+	align-items: center;
+	padding : 20px;
+	border: 3px solid white;
+}
+		
+img {
+	height : 150px;
+	width : 150px;
+	border-radius: 50%;
+	opacity : 0.75;
+}
+		
+.memberinfo {
+	display : flex;
+	flex-direction : column;
+	justify-content: center;
+	align-items: center; 
+	padding : 10px;
+}

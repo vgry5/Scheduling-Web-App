@@ -1,0 +1,116 @@
+* {
+	margin : 0;
+	padding : 0;
+	font-family : 'Poppins' , sans-serif;
+	color:white;
+}
+
+.calender{
+  font-size: 50px;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+}
+  
+.body-text {
+    display: flex;
+    color: #ccc;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: teal;
+    font-family: "Montserrat", sans-serif;
+	padding-right : 40px;
+}
+  
+.heading1{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+  
+.nav-links {
+    display: flex;
+    justify-content: space-around; 
+    width: 30%;
+}
+  
+.nav-links li {
+    list-style: none;
+}
+  
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+}
+  
+.nav-links a:hover:not(.active) {
+    background-color: lightseagreen;
+}
+
+.nav-links li a.active {
+    background-color: #4caf50;
+}
+
+#gallery {
+	margin-bottom : 100px;
+}
+.smallimages {
+	height : 200px;									/*height and width is set to 200px in order to set to a box*/
+	width : 200px;
+	border: 5px solid white;						
+	transition: transform 0.2s ease-in-out;			/*small image gets transformed to a scale of 1.2 when the curser is placed*/
+}
+
+.smallimages:hover {
+  transform: scale(1.2);
+}
+
+#thumbnails {
+	margin-top : 100px;
+	display : flex;										/*Body gets divided into two directions*/
+	justify-content : space-evenly;						/*Equal space between content*/
+}
+
+.largeimage {
+	display : flex;										/*Body gets divided into two directions*/
+	justify-content : space-evenly;						/*content get centered in the container*/
+}
+
+.largeimages {
+	margin-top : 100px;						
+	height : 400px;
+	width : 400px;
+}
+
+.description {
+	width: 50%;								/*Width is set to 50% from the container space*/							/*description container is set right to the image*/
+	display : flex;							/*Body gets divided into two directions*/
+	flex-direction : column;				/*Elements are set in the vertical direction*/
+	justify-content: center;				/*content get centered in the container*/
+	align-items: center;
+}
+
+p {
+	margin-top : 30px;
+	
+}
+
+footer {
+	margin-bottom : 25px;
+	text-align: center; 
+}

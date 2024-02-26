@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BestDays> <!--This is the root element,and this has 10 child elements,
+which are the <days> elements-->
+    <days> <!--This has 2 child elements,which are <days> & <activity>-->
+        <day>Monday</day>
+        <activity>Best day for meetings and planning.</activity>
+    </days>
+    <days>
+        <day>Tuesday</day>
+        <activity>Best day for creativity and brainstorming.</activity>
+    </days>
+    <days>
+        <day>Wednesday</day>
+        <activity>Best day for developing a new skill.</activity>
+    </days>
+    <days>
+        <day>Thursday</day>
+        <activity>Best day for presentations.</activity>
+    </days>
+    <days>
+        <day>Friday</day>
+        <activity>Best day to wrap up tasks and prepare for the weekend.</activity>
+    </days>
+    <days>
+        <day>Saturday</day>
+        <activity>Best day for self-care activities and personal development.</activity>
+    </days>
+    <days>
+        <day>Sunday</day>
+        <activity>Best day to relax and spend time with family and friends.</activity>
+    </days>
+    <days>
+        <day>Special Occasion</day>
+        <activity>Best day to celebrate important achievements and milestones.</activity>
+    </days>
+    <days>
+        <day>Holiday</day>
+        <activity>Best day to take a break and enjoy life.</activity>
+    </days>
+    <days>
+        <day>Important Day</day>
+        <activity>The day to catch up with missed work.</activity>
+    </days>
+</BestDays>

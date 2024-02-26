@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gallery page</title>
+		<link rel="stylesheet" href="gallerypagestylingsheet.css">       <!-- Add style sheet -->
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	</head>
+		
+	<body>
+		<nav>
+			<div class="heading1">
+				<i class='bx bx-calendar-edit calender'></i>
+				<h4>ScheduleIT</h4>
+			</div>
+			<ul class="nav-links">
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="cart.html">Shop</a></li>
+				<li><a href="registrationform.html">Register</a></li>
+				<li><a href="FormSheet.html">Feedback</a></li>
+				<li><a href="bestdayspage.html">BestDays</a></li>
+				<li><a class="active" href="gallerypage.html">Gallery</a></li>
+				<li><a href="Quiz.html">Quiz</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="newsletter.html">Newsletter</a></li>
+			</ul>
+		</nav>
+		<div id="gallery">
+		  <div id="thumbnails">
+			<img src="app.png" onclick="scrollToLargeImage(1)" class = "smallimages">                <!-- Add thumnail images -->
+			<img src="timezone.jpeg" onclick="scrollToLargeImage(2)" class = "smallimages">			<!-- Add thumnail images -->
+			<img src="appointment.jpg" onclick="scrollToLargeImage(3)" class = "smallimages">		<!-- Add thumnail images -->
+			<img src="Notifications.jpeg" onclick="scrollToLargeImage(4)" class = "smallimages">	<!-- Add thumnail images -->
+			<img src="analyse.jpeg" onclick="scrollToLargeImage(5)" class = "smallimages">			<!-- Add thumnail images -->
+		  </div>
+		  <div id="larger-images">
+			<div class = "largeimage">
+				<img id="large-image-1" src="app.png" class = "largeimages" alt="app">				<!--Add large images-->
+				<div class="description">
+					<h2>Calender</h2>																<!-- Add large images headings and descriptions -->
+					<p>A calender in a scheduling application will be useful for the user as it is a visual representation of dates and times so that the user will be
+					be able to schedule his tasks accordingly.It will help the user to keep track of important events and avoid scheduling confilts.This is a important where the user will be able to manage his efficiently
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = "largeimage">
+				<img id="large-image-2" src="timezone.jpeg" class = "largeimages" alt="timezone">		<!--Add large images-->
+				<div class="description">
+					<h2>Time-zone view</h2>																<!-- Add large images headings and descriptions -->
+					<p>Time zone tool in the scheduling application helps users to schedule meetings with people in other countries without any conflicts.
+					The user can have multiple time zones in the menu based on the countries where the user has most of their meetings which will help the user
+					to compare time zones easily.</p>
+				</div>
+			</div>
+			<div class = "largeimage">
+				<img id="large-image-3" src="appointment.jpg" class = "largeimages" alt="appointment">		<!--Add large images-->
+				<div class="description">
+					<h2>Appointments scheduler</h2>															<!-- Add large images headings and descriptions -->
+					<p>Appointments scheduler is an tool where it is used to manage and set up appointments with other people and organizations.
+					.The user should select all the free dates and timeslots initially, and when the user adds events to his 
+					calender,it will automatically set a time and date time based on the priority of the event.
+				</div>
+			</div>	
+			<div class = "largeimage">
+				<img id="large-image-4" src="Notifications.jpeg" class = "largeimages" alt="Notifications">		<!--Add large images-->
+				<div class="description">
+					<h2>Notifier</h2>																			<!-- Add large images headings and descriptions -->
+					<p> Notifier is a tool where the app sends notifications and alerts about upcoming events. This will send special instructions about upcoming events.This is an important tool where the user will be able to stay organized
+					and stay on time therefore, reduce the risk of missing and postponing appointments.</p>
+				</div>
+			</div>	
+			<div class = "largeimage">
+				<img id="large-image-5" src="analyse.jpeg" class = "largeimages" alt="analyse">		<!--Add large images-->
+				<div class="description">
+					<h2>Analytics and reports</h2>													<!-- Add large images headings and descriptions -->
+					<p>Analytics and reporting in a scheduling application refer to the feature that provides users with detailed information about their scheduling activities, such as the number of appointments, the duration of appointments, and the busiest times of day or week.
+					</p>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<footer> <a href="editorspage.html">EDITOR</a></footer>
+		<script src = "galleryscript.js"></script>      <!-- Add script -->
+	</body>

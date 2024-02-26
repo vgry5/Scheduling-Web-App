@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>coursework</title>
+		<link rel="stylesheet" href="registrationformstylingsheet.css">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	</head>
+	<body>
+	    <nav>
+			<div class="heading1">
+				 <i class='bx bx-calendar-edit calender'></i>
+				<h4>ScheduleIT</h4>
+			</div>
+			<ul class="nav-links">
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="cart.html">Shop</a></li>
+				<li><a class="active" href="registrationform.html">Register</a></li>
+				<li><a href="bestdayspage.html">BestDays</a></li>
+				<li><a href="FormSheet.html">Feedback</a></li>
+				<li><a href="gallerypage.html">Gallery</a></li>
+				<li><a href="Quiz.html">Quiz</a></li>
+				<li><a href="about.html" id = "about">About</a></li>
+				<li><a href="newsletter.html">Newsletter</a></li>
+			</ul>
+		</nav>
+	<div id = "body">
+		<div id="container">
+			<form>
+				<h2 id="formheading">Registration form</h2>																					<!-- Add form heading-->
+				<div id = "details">
+					<div class="input">
+						<label for="fullname"> Name</label>																			<!-- label for input -->
+						<input type="text" id="fullname" placeholder="Enter your name" name="fullname" onkeyup="return validateName()">		<!-- Add form inputs -->
+						<span id = "name-error"></span>
+					</div>
+					<div class="input">
+						<label for="email">Email</label>																					<!-- label for input -->
+						<input type="email" id="email" placeholder="Enter your email" name="email" onkeyup="return validate()">				<!-- Add form inputs -->
+						<span id = "email-error"></span>
+					</div>
+					<div class="input">
+						<label for="age">Age</label>																						<!-- label for input -->
+						<input type="number" id="age" placeholder="Enter your age" name="age" onkeyup="return validateAge()">				<!-- Add form inputs -->
+						<span id = "age-error"></span>
+					</div>
+					<div class="input">
+						<div class="gender">
+							<input type="radio" id="circle-1" name="gender">	
+							<input type="radio" id="circle-2" name="gender">
+							<label id="gendertitle" for="gender">Gender</label>																<!-- label for input -->
+							<span id = "circleone"></span>
+		  					<label class="genders" for="circle-1">Male</label>																<!-- label for input -->
+							<span id = "circletwo"></span>
+		  					<label class="genders" for="circle-2">Female</label><br>														<!-- label for input -->
+						</div>
+						<span id = "gender-error"></span>
+					</div>
+					<div class="input">
+						<label for="occupation">Occupation</label>																							<!-- label for input -->
+						<input type="text" id="occupation" placeholder="Enter your occupation" name="occupation" onkeyup="return validateOccupation()">		<!-- Add form inputs -->
+						<span id = "occupation-error"></span>
+					</div>
+					<div class="input">
+						<label for="workout">Enter the number of hours you workout per week</label>															<!-- label for input -->
+						<input type="text" id="workout" placeholder="Enter hours" name="workout" onkeyup="return validateWorkout()">						<!-- Add form inputs -->
+						<span id = "workout-error"></span>
+					</div>
+					<div class="input">
+						<label for="read">Enter the number of hours you read per week</label>															<!-- label for input -->
+						<input type="text" id="read" placeholder="Enter hours" name="read" onkeyup="return validateRead()">						<!-- Add form inputs -->
+						<span id = "read-error"></span>
+					</div>
+					<div class="input">Enter the number of working hours per week</label>															<!-- label for input -->
+						<input type="text" id="work" placeholder="Enter your working hours" name="work" onkeyup="return validateWork()">						<!-- Add form inputs -->
+						<span id = "work-error"></span>
+					</div>
+				</div>				
+				<div class="buttton">																									<!-- Add a submit button -->
+					<button type="button" id="button1">Register</button>
+				</div>
+			</form>
+		</div>	
+		<script src = "registrationformscript.js"></script>																				<!--Add javascript-->
+	</div>
+	<footer> <a href="editorspage.html">EDITOR</a></footer>
+	</body>
+	</html>
